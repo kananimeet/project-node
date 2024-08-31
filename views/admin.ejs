@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+    <title>Admin page</title>
+    <link rel="stylesheet" href="/login.css">
+   
+</head>
+
+<header>
+    <header class="main_header">
+        <nav class="main_header_nav">
+            <ul class="main_header_list_item">
+                <li class="main_header_list"><a href="/showdata">Shop</a></li>
+                <li class="main_header_list"><a href="/add">Admin</a></li>
+            </ul>
+        </nav>
+        
+</header>
+<body>
+    <div class="form-container">
+        <h2>Add User</h2>
+    <form action="/add-data" method="post" enctype="multipart/form-data" style="text-align: center;">
+                        <input type="hidden" name="pid">
+
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" name="name" placeholder="Enter your name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" placeholder="Enter your email ">
+                        </div>
+                        <div class="form-group">
+                            <label for="city">City</label>
+                            <input type="text" name="city" placeholder="Enter your city">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Image</label>
+                            <input type="file" name="image" placeholder="Enter your city">
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">Submit</button>
+       
+    </form>
+    </div>
+</body>
+</html>

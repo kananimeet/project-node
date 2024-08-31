@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shop</title>
+    <link rel="stylesheet" href="shop.css">
+
+    
+</head>
+
+<header class="main_header">
+    <nav class="main_header_nav">
+        <ul class="main_header_list_item">
+            <li class="main_header_list"><a href="/">Home</a></li>
+            <li class="main_header_list"><a href="/add">Admin</a></li>
+            <li class="main_header_list"><a href="/showdata">Shop</a></li>
+            <li class="main_header_list"><a href="/product">Users</a></li>
+            
+        </ul>
+    </nav>
+   
+    
+    <main>
+        
+
+    
+</header>
+
+
+<br><br>
+<body>
+
+    <h1 style="text-align: center;">Customer Data</h1>
+
+
+    <table border="2px solid black" width="100%" >
+        
+        <tr text-align="center">
+                
+                <th>Name</th>
+                <th>Email</th>
+                <th>City</th>
+                <th>Image</th>
+                <th>Action</th>
+                <th>Action</th>
+
+        </tr>
+
+          <%x.forEach((y)=> { %> 
+        <tr style="text-align: center;">
+                   
+                    
+                    <td><%= y.name %></td>
+                    <td><%= y.email %></td>
+                    <td><%= y.city %></td>
+                    <td><img src="/images/<%= y.image %>" width="100"></td>
+                    <td><a href="/edit-product/<%= y.email %>">Edit</a></td>
+                    <td><form style="display: inline;" action="/delete-product/<%= y.email %>?_method=DELETE" method="POST">
+                    <button style="cursor: pointer;" type="submit">Delete</button></td>
+                    </form>
+                   
+        </tr>
+         <% }) %> 
+
+       
+    </table>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shop</title>
+    <!-- <link rel="stylesheet" href="shop.css"> -->
+    <link rel="stylesheet" href="login.css">
+
+    
+</head>
+
+<header class="main_header">
+    <nav class="main_header_nav">
+        <ul class="main_header_list_item">
+            <li class="main_header_list"><a href="/">Home</a></li>
+            <li class="main_header_list"><a href="/add">Admin</a></li>
+            <li class="main_header_list"><a href="/showdata">Shop</a></li>
+            
+        </ul>
+    </nav>    
+</header>
+<body>
+    
+    <div class="text">
+    <h1>User Information</h1>
+    </div>
+    <%product.forEach((y)=> { %>
+    <div class="form-container">
+        
+        
+            <div class="form-group">
+                <img src="/images/<%= y.image %>">
+            </div>
+            <div class="form-group">
+                <%= y.name %>
+            </div>
+            <div class="form-group">
+                <%= y.email %>
+            </div>
+            <div class="form-group">
+                <%= y.city %>
+            </div>
+            <br>
+        
+    </div>
+
+    <%})%>
+
+   
+
+</body>
+</html>

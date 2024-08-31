@@ -1,0 +1,21 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        
+        title #{docTitel}
+        link(rel="stylesheet", href="shop.css")
+    
+body
+    header.main_header
+        nav.main_header_nav
+            ul.main_header_list_item
+                li.main_header_list
+                    a(href="/") Shop
+                li.main_header_list
+                    a(href="/add") Admin
+
+main 
+    each prod in prods
+        h1.product_name #{prod.product} 

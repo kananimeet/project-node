@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin page</title>
+    <link rel="stylesheet" href="/login.css">
+</head>
+
+<header>
+    <header class="main_header">
+        <nav class="main_header_nav">
+            <ul class="main_header_list_item">
+                <li class="main_header_list"><a href="/showdata">Shop</a></li>
+                <li class="main_header_list"><a href="/add">Admin</a></li>
+            </ul>
+        </nav>
+
+</header>
+<body>
+
+    <div class="form-container">
+        <h2>Update User</h2>
+
+
+
+
+
+
+
+    
+    <form action="/edit-product/<%=x.email %>?_method=put" enctype="multipart/form-data" method="post">
+
+
+        <div class="form-group">
+            <label for="">Name</label>
+            <input type="text" name="name" value="<%=x.name %>">
+        </div>
+        <div class="form-group">
+            <label for="">Email</label>
+            <input type="email" name="email" value="<%=x.email %>">
+        </div>
+        <div class="form-group">
+            <label for="">City</label>
+            <input type="text" name="city" value="<%=x.city %>">
+        </div>
+        <div class="form-group">
+            <label for="">Image</label>
+            <input type="file" name="image" value="<%=x.image %>">
+            
+        </div>
+        <button type="submit" class="submit-btn">Submit</button>
+</form>
+</div>
+</body>
+</html>
