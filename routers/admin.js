@@ -8,15 +8,9 @@ const jwt = require('jsonwebtoken');
 let pageModel = require('../model/pageModel');
 // const session =  require('express-session');
 
-
-
 let collection = require('../util/login');
 
 const app = express();
-
-
-
-
 
 // app.use(session({
 //     secret:'my secret',
@@ -189,14 +183,6 @@ router.get('/showdata',(req,res,next)=> {
         }
     }
 
-
-   
-
-
-
-
-
-
 const addProduct = require('../controller/product');
 const bodyParser = require('body-parser');
 
@@ -224,10 +210,6 @@ router.post('/add-data',upload.single('image'),async(req,res,body)=>{
 
 });
 
-
-
-
-
 router.get('/product',(req,res,next)=> {
        
     pageModel.find({})
@@ -250,9 +232,6 @@ router.get('/edit-product/:id', (req, res,next)=>{
 
 });
 
-
-
-
 router.put('/edit-product/:id',upload.single('image'),(req, res,next)=>{
     if(req.file)
         {
@@ -271,8 +250,6 @@ router.put('/edit-product/:id',upload.single('image'),(req, res,next)=>{
     });
  }
     else{
-
-
         pageModel.updateOne({email:req.params.id},{$set:{
         name:req.body.name,
         email:req.body.email,
